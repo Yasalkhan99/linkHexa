@@ -27,7 +27,7 @@ function MarqueeRow({ direction = "left" }: { direction?: "left" | "right" }) {
         {duplicated.map((name, i) => (
           <div
             key={`${name}-${i}`}
-            className="flex h-16 min-w-[140px] shrink-0 items-center justify-center border border-white/5 bg-zinc-800/80 text-center text-sm font-medium text-zinc-300 transition-colors hover:border-indigo-400/50 hover:text-white"
+            className="flex h-16 min-w-[140px] shrink-0 items-center justify-center rounded-2xl border border-white/5 bg-zinc-800/80 text-center text-sm font-medium text-zinc-300 transition-colors hover:border-indigo-400/50 hover:text-white"
           >
             {name}
           </div>
@@ -64,7 +64,7 @@ export default function Integrations() {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <div className="overflow-hidden border border-white/5 bg-zinc-900/50 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] sm:p-8">
+          <div className="overflow-hidden rounded-2xl border border-white/5 bg-zinc-900/50 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] sm:p-8">
             <div className="flex flex-col gap-4">
               <MarqueeRow direction="left" />
               <MarqueeRow direction="right" />
