@@ -59,7 +59,7 @@ export default function Hero() {
             </AnimatedOutlineButton>
           </motion.div>
 
-          {/* Product mockup */}
+          {/* Product mockup – infographic video */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,22 +72,16 @@ export default function Hero() {
                 <div className="h-3 w-3 rounded-full bg-amber-500/80" />
                 <div className="h-3 w-3 rounded-full bg-emerald-500/80" />
               </div>
-              <div className="grid grid-cols-12 gap-2 bg-white/[0.02] p-3 sm:gap-4 sm:p-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <motion.div
-                    key={i}
-                    className="col-span-12 rounded-lg border border-white/5 bg-white/5 p-4 sm:col-span-6 lg:col-span-4"
-                    whileHover={{ scale: 1.02, borderColor: "rgba(99,102,241,0.3)" }}
-                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                  >
-                    <div className="mb-3 h-2 w-1/3 rounded bg-white/10" />
-                    <div className="space-y-2">
-                      <div className="h-2 w-full rounded bg-white/5" />
-                      <div className="h-2 w-4/5 rounded bg-white/5" />
-                      <div className="h-2 w-2/3 rounded bg-white/5" />
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="relative aspect-[21/9] max-h-[280px] bg-black sm:max-h-[320px]">
+                <video
+                  src="/2318084_Business_Infographics_1920x1080.mp4"
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  title="LinkHexa – Business infographics"
+                />
               </div>
             </div>
           </motion.div>
