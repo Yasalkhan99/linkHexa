@@ -5,15 +5,15 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "LinkHexa cut our onboarding time in half. The automation workflows are incredibly intuitive.",
+      "LinkHexa helped us find high-performing campaigns in minutes. The platform makes managing partnerships effortless.",
     author: "Sarah Chen",
-    role: "Head of Ops",
-    company: "TechFlow",
+    role: "Partnerships Lead",
+    company: "GrowthHub",
     avatar: "SC",
   },
   {
     quote:
-      "We switched from three different tools to LinkHexa. One dashboard, one bill, way less chaos.",
+      "We switched from multiple affiliate tools to LinkHexa. One dashboard, one platform, zero confusion.",
     author: "Marcus Johnson",
     role: "CTO",
     company: "ScaleUp",
@@ -21,10 +21,10 @@ const testimonials = [
   },
   {
     quote:
-      "The integrations just work. Connected Slack, Stripe, and our CRM in under an hour.",
+      "Setting up campaigns was effortless. Linked email, analytics, and payment tools in no time.",
     author: "Elena Rodriguez",
-    role: "Founder",
-    company: "Luna Labs",
+    role: "Growth Lead",
+    company: "StackLabs",
     avatar: "ER",
   },
 ];
@@ -46,11 +46,16 @@ export default function Testimonials() {
             Loved by teams everywhere
           </h2>
           <p className="mt-3 text-base text-zinc-400 sm:mt-4 sm:text-lg">
-            See what our customers have to say about automating with LinkHexa.
+            See what our partners have to say for LinkHexa.
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-10 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
+        >
           {testimonials.map((t, i) => (
             <motion.div
               key={t.company}
@@ -59,10 +64,10 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               whileHover={{ y: -4 }}
-              className="glass rounded-2xl border border-white/5 p-4 sm:p-6"
+              className="glass flex flex-col rounded-2xl border border-white/5 p-4 sm:p-6"
             >
-              <p className="text-sm text-zinc-300 sm:text-base">&ldquo;{t.quote}&rdquo;</p>
-              <div className="mt-6 flex items-center gap-4">
+              <p className="flex-1 text-sm text-zinc-300 sm:text-base">&ldquo;{t.quote}&rdquo;</p>
+              <div className="mt-6 flex flex-shrink-0 items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-500/20 text-sm font-semibold text-indigo-400">
                   {t.avatar}
                 </div>
@@ -75,7 +80,7 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
