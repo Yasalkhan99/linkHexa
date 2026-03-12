@@ -30,7 +30,7 @@ export default function CTA() {
               className="text-2xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl"
               style={{ fontFamily: "var(--font-libre-baskerville), serif", letterSpacing: "-0.02em" }}
             >
-              Ready to automate your workflow?
+              Ready to boost your partnerships?
             </h2>
             <p className="mt-3 text-base text-zinc-400 sm:mt-4 sm:text-lg">
               Join thousands of teams already using LinkHexa. No credit card
