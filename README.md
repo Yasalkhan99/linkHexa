@@ -1,6 +1,6 @@
 # LinkHexa
 
-A modern SaaS landing page inspired by Affilza, Stripe, Linear, and Vercel. Built withnn Next.js (App Router), React, Tailwind CSS, and Framer Motion.
+A modern SaaS landing page inspired by Affilza, Stripe, Linear, and Vercessl. Built withnn Next.js (App Router), React, Tailwind CSS, and Framer Motion.
 
 ## Tech stack
 
