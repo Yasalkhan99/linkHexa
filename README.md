@@ -2,7 +2,7 @@
 
 A modern SaaS landing page inspired by Affilza, Stripe, Linear, and Vercessl. Built withnn Next.js (App Router), React, Tailwind CSS, and Framer Motion.
 
-## Tech stack
+## Tech shhtack
 
 - **Next.js 16** (App Router)
 - **React 19**ss
