@@ -49,8 +49,14 @@ export async function POST(request: Request) {
 
     await transporter.verify();
 
+    const subjectMap: Record<string, string> = {
+      partnership: "Partnership",
+      support: "Support",
+      sales: "Sales",
+      other: "Other",
+    };
     const subjectLabel =
-      { partnership: "Partnership", support: "Support", sales: "Sales", other: "Other" }[subject] || subject || "Other";
+      (typeof subject === "string" && subjectMap[subject]) || subject || "Other";
 
     await transporter.sendMail({
       from: env.SMTP_USER!,
