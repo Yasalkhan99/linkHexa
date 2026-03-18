@@ -89,29 +89,31 @@ export default function GetStartedContent() {
                 />
               </div>
             </div>
-            <div className="mt-12 grid gap-6 sm:gap-8 lg:grid-cols-2">
+            <div className="mt-12 grid gap-6 sm:gap-8 lg:grid-cols-2 lg:items-stretch">
               {/* Advertiser card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="flex flex-col rounded-2xl border border-white/10 bg-zinc-900/60 p-6 backdrop-blur-sm sm:p-8"
+                className="flex min-h-0 flex-col rounded-2xl border border-white/10 bg-zinc-900/60 p-6 backdrop-blur-sm sm:p-8"
               >
                 <h2 className="text-xl font-bold text-white sm:text-2xl" style={{ fontFamily: "var(--font-libre-baskerville), serif" }}>
                   As an <span className="text-indigo-400">Advertiser</span>
                 </h2>
                 <p className="mt-3 text-zinc-400">Grow your brand with top affiliates and performance marketing.</p>
-                <Link
-                  href="/get-started#partnership"
-                  className="mt-6 inline-flex w-full justify-center rounded-lg bg-indigo-600 px-5 py-3.5 font-semibold text-white transition-colors hover:bg-indigo-500"
-                >
-                  Advertiser Sign Up
-                </Link>
-                <p className="mt-4 text-center text-sm text-zinc-500">Or</p>
-                <Link href="/contact" className="mt-1 text-center text-sm font-medium text-indigo-400 transition-colors hover:text-indigo-300">
-                  Already registered? Login Here
-                </Link>
-                <ul className="mt-6 space-y-2.5 border-t border-white/10 pt-6">
+                <div className="mt-6 flex flex-col items-center">
+                  <Link
+                    href="/signup?role=advertiser"
+                    className="inline-flex w-full min-h-[48px] items-center justify-center rounded-lg bg-indigo-600 px-5 py-3.5 font-semibold text-white transition-colors hover:bg-indigo-500 sm:min-h-[52px]"
+                  >
+                    Advertiser Sign Up
+                  </Link>
+                  <p className="mt-4 text-center text-sm text-zinc-500">Or</p>
+                  <Link href="/login" className="mt-1 text-center text-sm font-medium text-indigo-400 transition-colors hover:text-indigo-300">
+                    Already registered? Login Here
+                  </Link>
+                </div>
+                <ul className="mt-6 flex-1 space-y-2.5 border-t border-white/10 pt-6">
                   {advertiserBenefits.map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm text-zinc-300">
                       <CheckIcon />
@@ -126,23 +128,25 @@ export default function GetStartedContent() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.08 }}
-                className="flex flex-col rounded-2xl border border-white/10 bg-zinc-900/60 p-6 backdrop-blur-sm sm:p-8"
+                className="flex min-h-0 flex-col rounded-2xl border border-white/10 bg-zinc-900/60 p-6 backdrop-blur-sm sm:p-8"
               >
                 <h2 className="text-xl font-bold text-white sm:text-2xl" style={{ fontFamily: "var(--font-libre-baskerville), serif" }}>
                   As a <span className="text-indigo-400">Publisher</span>
                 </h2>
                 <p className="mt-3 text-zinc-400">Turn your content into income with top brand partnerships.</p>
-                <Link
-                  href="/get-started#partnership"
-                  className="mt-6 inline-flex w-full justify-center rounded-lg bg-indigo-600 px-5 py-3.5 font-semibold text-white transition-colors hover:bg-indigo-500"
-                >
-                  Publisher Sign Up
-                </Link>
-                <p className="mt-4 text-center text-sm text-zinc-500">Or</p>
-                <Link href="/contact" className="mt-1 text-center text-sm font-medium text-indigo-400 transition-colors hover:text-indigo-300">
-                  Already registered? Login Here
-                </Link>
-                <ul className="mt-6 space-y-2.5 border-t border-white/10 pt-6">
+                <div className="mt-6 flex flex-col items-center">
+                  <Link
+                    href="/signup?role=publisher"
+                    className="inline-flex w-full min-h-[48px] items-center justify-center rounded-lg bg-indigo-600 px-5 py-3.5 font-semibold text-white transition-colors hover:bg-indigo-500 sm:min-h-[52px]"
+                  >
+                    Publisher Sign Up
+                  </Link>
+                  <p className="mt-4 text-center text-sm text-zinc-500">Or</p>
+                  <Link href="/login" className="mt-1 text-center text-sm font-medium text-indigo-400 transition-colors hover:text-indigo-300">
+                    Already registered? Login Here
+                  </Link>
+                </div>
+                <ul className="mt-6 flex-1 space-y-2.5 border-t border-white/10 pt-6">
                   {publisherBenefits.map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm text-zinc-300">
                       <CheckIcon />
