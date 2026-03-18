@@ -21,7 +21,7 @@ export default function BlogList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const staticPosts = getAllStaticPostsForList();
+    const staticPosts = getAllStaticPostsForList() as Post[];
     getAllPosts()
       .then((sanityPosts) => setPosts(mergeAndSort(staticPosts, sanityPosts)))
       .finally(() => setLoading(false));

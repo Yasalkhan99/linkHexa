@@ -21,7 +21,7 @@ export default function BlogPreview() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const staticPosts = getAllStaticPostsForList();
+    const staticPosts = getAllStaticPostsForList() as Post[];
     getLatestPosts(10)
       .then((sanityPosts) => mergeAndSort(staticPosts, sanityPosts))
       .then((merged) => setPosts(merged.slice(0, 3)))
