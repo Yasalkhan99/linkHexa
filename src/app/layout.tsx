@@ -38,6 +38,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const metadata = {
+  verification: {
+    google: "AMjBikCyQsL6-DwyFhxfdBZyWLfzUyZx-bmRbhrozZU",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
